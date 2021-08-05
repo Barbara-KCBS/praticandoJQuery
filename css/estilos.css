@@ -1,4 +1,5 @@
 .frase{
+    text-align: left;
     font-size: 20px;
 }
 .campo-digitacao{
@@ -7,4 +8,14 @@
 }
 .campo-desativado{
     background-color: lightgrey;
+}
+.icones{
+    vertical-align: middle;
+}
+
+.borda-verde{
+    border: 3px solid green;
+}
+.borda-vermelha{
+    border: 3px solid red;
 }

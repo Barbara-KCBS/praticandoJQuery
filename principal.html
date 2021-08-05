@@ -13,12 +13,23 @@
         <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
         <ul class="informacoes center">
-            <li><span id="tamanho-frase">19</span> palavras</li>
-            <li><span id="tempo-digitacao">5</span> segundos</li>
+            <li>
+                <i class="small material-icons icones">description</i>
+                <span id="tamanho-frase">19</span> palavras
+            </li>
+            <li>
+                <i class="small material-icons icones">query_builder</i>
+                <span id="tempo-digitacao">15</span> segundos
+            </li>
         </ul>
         
         <textarea class="campo-digitacao" cols="30" rows="10"></textarea>
-        <button id="botao-reiniciar">Reiniciar jogo</button>
+
+        <div class="botoes">
+            <a class="btn-floating btn-large waves-effect waves-light red" id="botao-reiniciar">
+                <i class="material-icons">restore</i>
+            </a>
+        </div>
 
         <ul class="center">
             <li><span id="contador-caracteres">0</span> caracteres</li>
