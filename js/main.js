@@ -37,13 +37,27 @@ function inicializaCronometro() {
             console.log(tempoRestante);
             $("#tempo-digitacao").text(tempoRestante);
             if(tempoRestante < 1){
-                campo.attr("disabled", true);
                 clearInterval(intervalo);
+                campo.attr("disabled", true);
                 $("#botao-reiniciar").attr("disabled", false);
                 campo.toggleClass("campo-desativado")
+                finalizaJogo();
             }
         }, 1000);
     })
+}
+function finalizaJogo(){
+    campo.attr("disabled", true);             
+    $("#botao-reiniciar").attr("disabled", false);
+    campo.toggleClass("campo-desativado")
+    inserirPlacar();
+}
+function inserirPlacar(){
+    var corpoTabela = $(".placar").find("tbody");
+    var usuario = "Barbara";
+    var numPalavras = $("#contador-palavras").text();
+    var linha = "<tr>" + "<td>" + usuario + "</td>" + "<td>" + numPalavras +"</td>" + "</tr>";
+    corpoTabela.prepend(linha);
 }
 
 function inicializaMarcadores(){
