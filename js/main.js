@@ -18,6 +18,7 @@ function atualizaTamanhoFrase() {
 
 function inicializaContador() {
     campo.on('input', function(){
+
         var conteudo = campo.val();
         var qtdPalavras = conteudo.split(/\s+/).length -1;
         $("#contador-palavras").text(qtdPalavras);
@@ -38,27 +39,19 @@ function inicializaCronometro() {
             $("#tempo-digitacao").text(tempoRestante);
             if(tempoRestante < 1){
                 clearInterval(intervalo);
-                campo.attr("disabled", true);
-                $("#botao-reiniciar").attr("disabled", false);
-                campo.toggleClass("campo-desativado")
                 finalizaJogo();
             }
         }, 1000);
     })
 }
+
 function finalizaJogo(){
     campo.attr("disabled", true);             
     $("#botao-reiniciar").attr("disabled", false);
     campo.toggleClass("campo-desativado")
     inserirPlacar();
 }
-function inserirPlacar(){
-    var corpoTabela = $(".placar").find("tbody");
-    var usuario = "Barbara";
-    var numPalavras = $("#contador-palavras").text();
-    var linha = "<tr>" + "<td>" + usuario + "</td>" + "<td>" + numPalavras +"</td>" + "</tr>";
-    corpoTabela.prepend(linha);
-}
+
 
 function inicializaMarcadores(){
      var frase = $(".frase").text();
