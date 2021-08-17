@@ -23,7 +23,7 @@ body{
     border: 3px solid red;
 }
 table{
-    width: 70%;
+    width: 800px;
     margin: 0 auto;
 }
 .placar{
@@ -41,4 +41,17 @@ table{
 
 #frase-id{
     width: 40px;
+}
+
+#botao-sync{
+    float: right;
+}
+
+.select-usuarios{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+}
+#usuarios{
+    display: block;
 }
